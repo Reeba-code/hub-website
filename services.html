@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiHub - Mahikeng Innovation Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #07173F;
+            --secondary-color: #ff6b00;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --accent-color: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fira Sans', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+       
+        
+        /* Hero Section */
+        .hero-section {
+        height: 100vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #e05d00;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #003d7a;
+        }
+        
+        /* About Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Mission Vision */
+        .mission-vision {
+            background-color: #f5f7fa;
+        }
+        
+        .mv-container {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .mv-box {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .mv-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .mv-box i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .mv-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        /* Services Section */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .service-content ul {
+            list-style-position: inside;
+            margin-bottom: 15px;
+        }
+        
+        .service-content ul li {
+            margin-bottom: 8px;
+        }
+        
+        /* Achievements Section */
+        .achievements {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+        
+        .achievements .section-title h2 {
+            color: white;
+        }
+        
+        .achievements .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .stat-box {
+            flex: 1;
+            min-width: 200px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        .stat-box h3 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .stat-box p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Incumbents Section */
+        .incumbents-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .incumbent-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .incumbent-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .incumbent-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .incumbent-content {
+            padding: 20px;
+        }
+        
+        .incumbent-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .incumbent-content p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        .hero {
+    height: 100vh;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('images/robo.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+        
+        /* Events Section */
+        .events {
+            background-color: #f5f7fa;
+        }
+        
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .event-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .event-date {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .event-content {
+            padding: 20px;
+        }
+        
+        .event-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .event-content p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .partner-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 0;
+    }
+    .partner-logos img {
+      max-height: 80px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .partner-logos img:hover {
+      transform: scale(1.05);
+    }
+    
+   
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .contact .section-title h2 {
+            color: white;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .contact-form h3 {
+            color: var(--dark-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+       
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.social-icons a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #333;
+    border-radius: 50%;
+}
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .mv-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+        
+   #footer {
+  position: relative;
+  overflow: hidden;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(270deg, #d4af37, #ffea00, #d4af37);
+  background-size: 600% 600%;
+  animation: glowingBorder 8s linear infinite;
+  filter: blur(6px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes glowingBorder {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+#footer {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  background: #0d0d0d; /* darker black background */
+  background-image:
+    linear-gradient(rgba(212,175,55,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveGrid 60s linear infinite; /* slower grid animation */
+  color: #b8b8b8;
+  border-top: 1px solid rgba(212,175,55,0.1);
+  z-index: 10;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(270deg, rgb(212, 175, 55), rgba(255,234,0,0.1), rgba(212,175,55,0.3));
+  background-size: 600% 600%;
+  animation: glowingBorder 12s linear infinite;
+  filter: blur(4px);
+  opacity: 0.25;  /* much more subtle */
+  z-index: 0;
+}
+
+@keyframes glowingBorder {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes moveGrid {
+  0% {background-position: 0 0, 0 0;}
+  100% {background-position: 40px 40px, 40px 40px;}
+}
+
+.social-icons a:hover {
+  animation: pulseGlow 1.8s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(255, 234, 0, 0.3);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.4), 0 0 10px rgba(255, 234, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 0 30px rgba(255, 234, 0, 0.4);
+  }
+}
+
+.footer-content {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-logo img {
+  height: 60px; /* increased from 40px */
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  animation: pulse 3s ease-in-out infinite;
+  transition: filter 0.3s ease;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(0) invert(1);
+  }
+  50% {
+    transform: scale(1.08);
+    filter: brightness(0) invert(0.85);
+  }
+}
+
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #b8b8b8;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-links a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #d4af37;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.footer-links a:hover {
+  color: #d4af37;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #222222;
+  color: #d4af37;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+.social-icons a:hover {
+  background: #d4af37;
+  color: #121212;
+  box-shadow: 0 0 15px #d4af37;
+}
+
+.social-icons a svg {
+  width: 18px;
+  height: 18px;
+}
+
+copyright {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 25px;
+  color: #666666;
+  font-size: 13px;
+  user-select: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
+    </style>
+</head>
+<body>
+  
+
+    <header class="header-main">
+    
+  
+        <div class="logo">
+          <img src="images/Picture2.png" alt="Mafikeng Innovation Hub Logo" />
+        </div>
+      
+        <!-- Hamburger for mobile -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      
+        <!-- Navigation -->
+        <nav>
+          
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li class="dropdown">
+              <a href="#about">Who We Are</a>
+              <ul class="dropdown-menu">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Team</a></li>
+              </ul>
+            </li>
+            <li><a href="programs.html">Programmes</a></li>
+            <li><a href="centers.html">Facilities</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Events</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      
+        
+    <div class="card">
+      <a href="#" class="socialContainer containerOne">
+        <svg class="socialSvg instagramSvg" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path> </svg>
+      </a>
+      
+      <a href="#" class="socialContainer containerTwo">
+        <svg class="socialSvg twitterSvg" viewBox="0 0 16 16"> <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path> </svg>              </a>
+        
+      <a href="#" class="socialContainer containerThree">
+        <svg class="socialSvg linkdinSvg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+      </a>
+      
+      <a href="#" class="socialContainer containerFour">
+        <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16"> <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path> </svg>
+      </a>
+    </div>     
+    </div>     
+      </header>
+      
+      <style>
+      /* HEADER BASE */
+     
+      .header-main {
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 30px;
+        background: transparent;
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      
+      /* LOGO */
+      .logo img {
+        height: 60px;
+        transform: scale(1.15);
+        transform-origin: left center;
+      }
+      
+      /* NAVIGATION */
+      .nav-menu {
+        font-family: 'Fira Sans', sans-serif;
+      display: flex;
+      background: transparent !important;
+      list-style: none;
+      gap: 28px;
+      margin: 0;
+      margin-left: -50px; /* Shift menu items 15px to the left */
+    }
+    
+    header {
+      position: fixed;
+      display: flex;
+      background: #b89c02 !important;
+      align-items: center;
+      justify-content: flex-start; /* align more to the left */
+    }
+    
+    
+      .nav-menu a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: hsl(0, 0%, 100%);
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease;
+        margin-left: auto; /* push it next to the logo but closer */
+        transform: translateX(-15px); /* physically shift it left */
+      }
+      .nav-menu a:hover {
+        color: #00ffe0;
+      }
+      .nav-menu a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        width: 0%;
+        height: 2px;
+        background: #00ffe0;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      .nav-menu a:hover::after {
+        width: 100%;
+      }
+      
+      /* DROPDOWN */
+      .dropdown {
+        position: relative;
+      }
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        background: rgba(30, 30, 30, 0.9);
+        backdrop-filter: blur(10px);
+        list-style: none;
+        padding: 10px 0;
+        border-radius: 8px;
+        top: 28px;
+        min-width: 150px;
+      }
+      .dropdown-menu li {
+        padding: 6px 16px;
+      }
+      .dropdown-menu a {
+        color: #fff;
+        font-size: 14px;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      
+     
+      
+      /* HAMBURGER */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+      }
+      .hamburger span {
+        width: 24px;
+        height: 2px;
+        background: white;
+        border-radius: 2px;
+      }
+      
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .nav-menu {
+          display: none;
+          position: absolute;
+          top: 70px;
+          right: 20px;
+          flex-direction: column;
+          background: rgba(20, 20, 20, 0);
+          padding: 20px;
+          border-radius: 10px;
+        }
+        .nav-menu.active {
+          display: flex;
+        }
+        .hamburger {
+          display: flex;
+        }
+      }
+      </style>
+      
+      <script>
+      document.getElementById('hamburger').addEventListener('click', function(){
+        document.getElementById('nav-menu').classList.toggle('active');
+      });
+      let lastScroll = 0;
+    const header = document.querySelector('.header-main');
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+    
+      if (currentScroll > lastScroll && currentScroll > 50) {
+        // Scrolling down
+        header.style.top = '-100px'; // hides the header
+      } else {
+        // Scrolling up
+        header.style.top = '0';
+      }
+    
+      lastScroll = currentScroll;
+    });
+    
+      </script>
+      
+            
+       
+    
+        <style>
+       
+    
+    
+      .card {
+      width: fit-content;
+      height: fit-content;
+      background: none !important;       
+      background-color: transparent !important; 
+      box-shadow: none !important;       
+      border: none !important;           
+      display: flex;
+      flex-direction: row; 
+      align-items: center;
+      justify-content: center;
+      padding: 15px; 
+      gap: 10px; 
+    }
+    
+    .socialContainer {
+      width: 35px; 
+      height: 35px; 
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition-duration: .3s;
+      border-radius: 20px; 
+    }
+    
+    
+    .containerOne:hover {
+      background-color: #d62976;
+      transition-duration: .3s;
+    }
+    /* twitter */
+    .containerTwo:hover {
+      background-color: #00acee;
+      transition-duration: .3s;
+    }
+    /* linkedin */
+    .containerThree:hover {
+      background-color: #0072b1;
+      transition-duration: .3s;
+    }
+    /* whatsapp */
+    .containerFour:hover {
+      background-color: #128C7E;
+      transition-duration: .3s;
+    }
+    
+    .socialContainer:active {
+      transform: scale(0.9);
+      transition-duration: .3s;
+    }
+    
+    .socialSvg {
+      width: 12px; 
+    }
+    
+    .socialSvg path {
+      fill: rgb(255, 255, 255);
+    }
+    
+    .socialContainer:hover .socialSvg {
+      animation: slide-in-top 0.3s both;
+    }
+    
+    @keyframes slide-in-top {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+    
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    
+    
+        </style>
+    
+
+    <!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Mahikeng Innovation Hub Services</h1>
+        <p>Empowering entrepreneurs and innovators to create sustainable solutions for tomorrow's world today</p>
+        <a href="about.html" class="btn">Learn More</a>
+        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We offer a wide range of services to support entrepreneurs, innovators, and businesses in the North West Province</p>
+            </div>
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/3D.jpg" alt="Enterprise Development">
+                    </div>
+                    <div class="service-content">
+                        <h3>Enterprise Development</h3>
+                        <ul>
+                            <li>Incubation Programme (Full)</li>
+                            <li>Product Development</li>
+                            <li>Business shared services</li>
+                            <li>Advanced services such as IP, commercialisation</li>
+                            <li>Market analysis, market linkages</li>
+                            <li>Develop a new business pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/agritech.png" alt="Future Skills Development">
+                    </div>
+                    <div class="service-content">
+                        <h3>Future Skills Development</h3>
+                        <ul>
+                            <li>Local & global resource training</li>
+                            <li>Partners training programmes</li>
+                            <li>Incubation training</li>
+                            <li>Sector based training programmes</li>
+                            <li>Internship programme(MICTSETA)</li>
+                            <li>CISCO Networking Academy</li>
+                            <li>AWS re/Start programme</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/rusty.jpg" alt="Grassroot Innovation Development">
+                    </div>
+                    <div class="service-content">
+                        <h3>Grassroot Innovation Development</h3>
+                        <ul>
+                            <li>Technology/Product showcase</li>
+                            <li>Events- Hackathons</li>
+                            <li>Partner Specialised programme</li>
+                            <li>Sector based mentoring</li>
+                            <li>National exchange programmes</li>
+                            <li>Living lab</li>
+                            <li>Smart Manufacturing Lab</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Section>
+        <div>
+            T
+        </div>
+    </Section>
+    <!-- Achievements Section -->
+    <section class="section achievements">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Achievements</h2>
+                <p>We're proud of the impact we've made in the North West Province</p>
+            </div>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>14</h3>
+                    <p>Hub Staff</p>
+                </div>
+                <div class="stat-box">
+                    <h3>22</h3>
+                    <p>Incumbents</p>
+                </div>
+                <div class="stat-box">
+                    <h3>56</h3>
+                    <p>Estimated Jobs After Incubation</p>
+                </div>
+                <div class="stat-box">
+                    <h3>1000+</h3>
+                    <p>Youth Trained in Digital Skills</p>
+                </div>
+                <div class="stat-box">
+                    <h3>200+</h3>
+                    <p>Graduates Trained in different Skills Programmes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Partners</h2>
+                <p>We collaborate with leading organizations to drive innovation</p>
+            </div>
+           
+    <!-- Partner Logos -->
+    <div class="partner-logos" data-aos="zoom-in">
+        
+        <img src="images/GCIP.png" alt="GCIP">
+        <img src="images/UNIDO.png" alt="UNIDO">
+        <img src="images/SCIENCE.png" alt="DSI">
+        <img src="images/MiHub.png" alt="MiHub">
+        <img src="images/TIA.gif" alt="TIA">
+      </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+      
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Brand Logo">
+          </div>
+      
+          <div class="footer-links">
+            <a href="#terms">Terms & Conditions</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#cookies">Cookies</a>
+          </div>
+      
+          <div id="address-map" style="flex: 1 1 320px; min-width: 280px; color: #b8b8b8; font-size: 14px;">
+            <h4 style="color: #d4af37; margin-bottom: 8px; font-weight: 600;">Our Location</h4>
+            <p style="margin: 0 0 12px 0;">2696 James Watt Cres, Mafikeng, Industrial Site</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.221753306938!2d25.85202851502347!3d-25.852098382365665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb77249e672a6af%3A0x4d66819ac5a23e70!2s2697%20James%20Watt%20Cres%2C%20Mafikeng%2C%20Industrial%20Site!5e0!3m2!1sen!2sza!4v1691847970283!5m2!1sen!2sza"
+              width="100%" height="120" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+      
+      
+          </div>
+      
+          <div id="social-links" class="social-icons">
+            <!-- Social icons here -->
+          </div>
+      
+          <p class="copyright">
+            &copy; <span id="current-year"></span> Mafikeng Digital Innovation Hub. All Rights Reserved.
+          </p>
+      
+        </div>
+      </footer>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                if (this.getAttribute('href') === '#') return;
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    navMenu.classList.remove('show');
+                }
+            });
+        });
+        
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Here you would typically send the form data to a server
+                // For this example, we'll just show an alert
+                alert(`Thank you, ${name}! Your message has been received. We'll get back to you soon.`);
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+        
+        // Scroll Animation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight - 100) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Initialize sections with fade-in effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // Trigger initial animation for hero section
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.opacity = '1';
+            }
+        });
+    </script>
+</body>
+</html>

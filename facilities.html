@@ -1,0 +1,105 @@
+<section>
+    <div class="feature-section" style="
+        position: relative; 
+        min-height: 600px; 
+        background: linear-gradient(135deg, #07173F 0%, #333333 100%);
+        overflow: hidden;
+      ">
+      
+      <!-- Dark overlay -->
+      <div style="
+        position: absolute; 
+        top: 0; left: 0; 
+        width: 100vw; height: 100%; 
+        background: rgba(7, 23, 63, 0.85); 
+        z-index: 1;">
+      </div>
+      
+      <!-- Background video -->
+      <div style="
+        position: absolute; 
+        top: 0; left: 0; 
+        width: 100%; height: 100%; 
+        z-index: 0; 
+        opacity: 0.15;">
+        <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+          <source src="images/welcome.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <!-- Content: text and video side by side -->
+      <div style="
+        position: relative; 
+        z-index: 2; 
+        display: flex; 
+        align-items: center; 
+        padding: 80px 40px; 
+        color: white;
+        flex-wrap: wrap;
+      ">
+        
+        <div class="feature-text" style="flex: 1; min-width: 300px; padding: 0 40px;">
+          <h3 class="feature-heading" style="
+              font-size: 2rem; 
+              font-weight: bold; 
+              margin-bottom: 20px; 
+              color: #D4AF37;
+            ">
+            Fighting for the underdog
+          </h3>
+          <p class="feature-description" style="
+              font-size: 1.1rem; 
+              line-height: 1.6;
+            ">
+            We started our mission because tech in rural areas hadn't evolved in decades,
+            and we knew communities deserved better. Like David slaying Goliath, we're challenging
+            the status quo—bringing innovation and digital opportunities to everyone.
+          </p>
+        </div>
+        
+        <div class="feature-media" style="flex: 1; min-width: 300px; padding: 0 40px;">
+          <video autoplay loop muted playsinline style="
+              width: 100%; 
+              border-radius: 8px; 
+              box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            ">
+            <source src="images/welcome.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <style>
+    .feature-heading {
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+    }
+  
+    .feature-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      font-family: 'Fira Sans', sans-serif;
+    }
+  
+    /* Fade Animation for Hero Title */
+    @keyframes fade-slide {
+      0% {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+    }
+  </style>
+  

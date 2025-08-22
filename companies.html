@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mafikeng Digital Innovation Hub - Companies</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+    }
+
+    #header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    .nav-menu ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-menu a {
+      color: #000;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 10px 20px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .nav-menu a:hover {
+      color: #e1b800;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+      transform: perspective(800px) rotateY(10deg);
+    }
+
+    .drop-down ul {
+      position: absolute;
+      display: none;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      padding: 10px 0;
+    }
+
+    .drop-down:hover ul {
+      display: block;
+    }
+
+    .drop-down ul li {
+      padding: 5px 15px;
+    }
+
+    .header-social-links a {
+      color: black;
+      margin-left: 15px;
+      font-size: 1.2rem;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .header-social-links a:hover {
+      color: #fd7000;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 991px) {
+      .nav-menu {
+        display: none;
+      }
+
+      .header-social-links {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+      }
+
+      #mobile-menu {
+        display: block;
+        cursor: pointer;
+      }
+
+      #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        width: 100%;
+      }
+
+      #menu.show {
+        display: flex;
+      }
+    }
+
+    .main-content {
+      margin-top: 130px;
+      padding: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header2 {
+      background-color: #152238;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .nav2 {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #152238;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .nav2 a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav2 a:hover {
+      color: #e1b800;
+      text-decoration: underline;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #152238;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid #e1b800;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+      border-color: #fd7000;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #e1b800, #fd7000);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: contain;
+      margin: 0 auto 1.5rem;
+      display: block;
+      background-color: #f8f9fa;
+      padding: 10px;
+      border: 3px solid #e1b800;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: #152238;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo mr-auto"><img src="images/logo.png" alt="Logo" class="img-fluid"></a>
+      <nav class="nav-menu d-none d-lg-flex">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="drop-down"><a href="#">About</a>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Team</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="#">Recruitment</a>
+            <ul>
+              <li><a href="Incubation-application.html">Incumbent Applications</a></li>
+              <li><a href="vacancies.html">Vacancies</a></li>
+              <li><a href="programs.html">Programs</a></li>
+            </ul>
+          </li>
+          <li><a href="companies.html">Companies</a></li>
+          <li class="drop-down"><a href="#">Services</a>
+            <ul>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="prices.html">Prices</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="centers.html">Centers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-social-links">
+        <a href="https://twitter.com/MafIHub" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/Mafihub" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/mafikeng.innovation.hub" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/mafikeng-digital-innovation-hub/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div id="mobile-menu" class="d-lg-none"><i class="fas fa-bars"></i></div>
+      <div id="menu" class="d-lg-none"></div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <header class="header2">
+      <h1>Enterprise Development</h1>
+    </header>
+
+    <nav class="nav2">
+      <a href="#companies">Companies</a>
+      <a href="#alumni">Alumni</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+      <section id="companies">
+        <h2 class="section-title">Incubation Companies</h2>
+        <p>Current Incumbents</p>
+        <div class="grid">
+          <div class="card">
+            <img src="images/agri.jpg" alt="Company Logo">
+            <h3>Company Name 1</h3>
+            <p>Industry: Technology</p>
+            <p>Description of the company and its mission.</p>
+          </div>
+          <div class="card">
+            <img src="images/cisco.webp" alt="Company Logo">
+            <h3>Company Name 2</h3>
+            <p>Industry: Healthcare</p>
+            <p>Description of the company and its mission.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="alumni">
+        <h2 class="section-title">Success Stories</h2>
+        <p>INCUMBENTS ON THE MARKET</p>
+        <div class="grid">
+          <div class="card">
+            <img src="images/Mosadi.png" alt="Mosadi Temo Organics Logo">
+            <h3>Mosadi Temo Organics</h3>
+            <p>Agri-Tech Company</p>
+            <p>
+              Uses vermiculite to grow tea and fertilizers. Offers worm-based compost, liquid manure, and organic seedlings—chemical-free.
+              Fertilizers and worms are sold to farmers across the province.
+            </p>
+          </div>
+          <div class="card">
+            <img src="images/Veish.png" alt="VEISH GROUP Logo">
+            <h3>VEISH GROUP</h3>
+            <p>Fashion & Smart Tech</p>
+            <p>
+              Founded by Gift Mpho Dialwe after MDIHub's 2020 hackathon. Known for smart backpacks in partnership with Gabriel Trackers.
+              Active in fashion shows and SAITEX 2023. Finalizing smart tech installation.
+            </p>
+          </div>
+          <div class="card">
+            <img src="images/Angy.png" alt="Key Fertility Logo">
+            <h3>Key Fertility</h3>
+            <p>Biotech & Health Innovation</p>
+            <p>
+              Started by Tshepiso Mphahlele and Angie Mahlangu. Develops non-invasive health-monitoring devices like PATCH.
+              Aims to provide home-based vital sign tracking tools. Currently in prototype phase.
+            </p>
+          </div>
+          <div class="card">
+            <img src="images/Buhle.png" alt="Buhle Bomqhele Logo">
+            <h3>Buhle Bomqhele</h3>
+            <p>Organic Haircare & Smart Beauty Tech</p>
+            <p>
+              Founded by Paula Maseko. Produces 4+ haircare products. Developed Smart Comb (in testing).
+              Hosts cosmetic-making workshops and created 4 jobs, 2 with 3-year contracts.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Incubation Hub. All Rights Reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

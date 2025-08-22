@@ -1,0 +1,1819 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mafikeng Digital Innovation Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="assets/img/favicon.png" rel="icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+ <style>
+        body {
+          font-family: 'Fira Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+        }
+     
+.logo img {
+  width: 100px;
+  height: auto;
+ 
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+
+
+#particles-js {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 99%;
+}
+#particle-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 99%;
+}
+.satellite{
+        font-size: 1rem;
+       margin-bottom: 30px;
+}
+.zones-title{
+  font-size: 2rem;
+  font-weight: bold;
+}
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            margin: 20px 0;
+            
+        }
+       
+       /* Intro Section with Background Image */
+       .intro {
+  width: 100%; /* full width */
+  max-width: 100%; /* ensure no max width constraints */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('images/back.jpg') no-repeat center center / cover;
+  color: #fff;
+  padding: 200px 20px; /* keeps your height as is */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+/* Fallback if image doesn't load */
+.intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Show fallback if image fails to load */
+.intro.image-error {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+}
+
+.intro.image-error::before {
+  opacity: 1;
+}
+
+.intro h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-out;
+}
+
+.intro p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+/* Center Title Styles */
+.center-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--dark);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.center-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* Section Content Layout */
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Clickable Div Styles */
+.clickable-div {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.clickable-div:hover {
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .intro {
+    padding: 150px 20px;
+  }
+  
+  .intro h1 {
+    font-size: 36px;
+  }
+  
+  .intro p {
+    font-size: 18px;
+  }
+  
+  .center-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    padding: 120px 15px;
+    margin-top: 0;
+  }
+  
+  .intro h1 {
+    font-size: 28px;
+  }
+  
+  .intro p {
+    font-size: 16px;
+  }
+}
+
+.s-centres{
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+}
+      
+    </style>
+</head>
+<body>
+
+  
+  <header class="header-main">
+    
+  
+    <div class="logo">
+      <img src="images/Picture2.png" alt="Mafikeng Innovation Hub Logo" />
+    </div>
+  
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <!-- Navigation -->
+    <nav>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="about.html">Who We Are</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </li>
+        <li><a href="programs.html">Programmes</a></li>
+        <li><a href="centers.html">Facilities</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  
+    
+<div class="card">
+  <a href="#" class="socialContainer containerOne">
+    <svg class="socialSvg instagramSvg" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path> </svg>
+  </a>
+  
+  <a href="#" class="socialContainer containerTwo">
+    <svg class="socialSvg twitterSvg" viewBox="0 0 16 16"> <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path> </svg>              </a>
+    
+  <a href="#" class="socialContainer containerThree">
+    <svg class="socialSvg linkdinSvg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+  </a>
+  
+  <a href="#" class="socialContainer containerFour">
+    <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16"> <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path> </svg>
+  </a>
+</div>     
+</div>     
+  </header>
+  
+  <style>
+  /* HEADER BASE */
+ 
+  .header-main {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 30px;
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* LOGO */
+  .logo img {
+    height: 60px;
+    transform: scale(1.15);
+    transform-origin: left center;
+  }
+  
+  /* NAVIGATION */
+  .nav-menu {
+    font-family: 'Fira Sans', sans-serif;
+  display: flex;
+  background: transparent !important;
+  list-style: none;
+  gap: 28px;
+  margin: 0;
+  margin-left: -50px; /* Shift menu items 15px to the left */
+}
+header {
+  position: fixed;
+  display: flex;
+  background: #b89c02 !important;
+  align-items: center;
+  justify-content: flex-start; /* align more to the left */
+}
+
+
+  .nav-menu a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+    margin-left: auto; /* push it next to the logo but closer */
+    transform: translateX(-15px); /* physically shift it left */
+  }
+  .nav-menu a:hover {
+    color: #00ffe0;
+  }
+  .nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: #00ffe0;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  .nav-menu a:hover::after {
+    width: 100%;
+  }
+  
+  /* DROPDOWN */
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(10px);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    top: 28px;
+    min-width: 150px;
+  }
+  .dropdown-menu li {
+    padding: 6px 16px;
+  }
+  .dropdown-menu a {
+    color: #fff;
+    font-size: 14px;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+ 
+  
+  /* HAMBURGER */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      flex-direction: column;
+      background: rgba(20, 20, 20, 0);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .nav-menu.active {
+      display: flex;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+  </style>
+  
+  <script>
+  document.getElementById('hamburger').addEventListener('click', function(){
+    document.getElementById('nav-menu').classList.toggle('active');
+  });
+  let lastScroll = 0;
+const header = document.querySelector('.header-main');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // Scrolling down
+    header.style.top = '-100px'; // hides the header
+  } else {
+    // Scrolling up
+    header.style.top = '0';
+  }
+
+  lastScroll = currentScroll;
+});
+
+  </script>
+  
+        
+   
+
+    <style>
+   
+
+
+  .card {
+  width: fit-content;
+  height: fit-content;
+  background: none !important;       
+  background-color: transparent !important; 
+  box-shadow: none !important;       
+  border: none !important;           
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  padding: 15px; 
+  gap: 10px; 
+}
+
+.socialContainer {
+  width: 35px; 
+  height: 35px; 
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+  border-radius: 20px; 
+}
+
+
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter */
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkedin */
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* whatsapp */
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 12px; 
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Section Wrapper */
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Section Title */
+.s-centres {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+
+/* Paragraph */
+.satellite {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: center;
+  color: #444;
+}
+
+/* Grid Layout */
+.section-content .clickable-div {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Card Styling */
+.section-item {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.section-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.section-item h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 16px 0 8px;
+  color: #111827;
+  text-align: center;
+}
+
+.section-item p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* Hover Effect */
+.section-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+
+    </style>
+
+<section class="intro" 
+style="position: relative; 
+       height: 600px; 
+       width: 100%; 
+       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/back.jpg') no-repeat center center / cover; 
+       color: #fff; 
+       text-align: center; 
+       overflow: hidden; 
+       font-family: 'Fira Sans', sans-serif;">
+
+<!-- Particles -->
+<div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+
+<!-- Text on top -->
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; max-width: 800px; padding: 0 20px;">
+
+<h1 style="margin: 0 0 15px 0; font-size: 50px; font-weight: 700; line-height: 1.2;">Facilities</h1>
+
+<p style="font-size: 20px; line-height: 1.6; margin: 0 0 25px 0; font-weight: 400; color: #f0f0f0;">
+Transforming North West Province with Innovation and Technology
+</p>
+
+
+<p style="font-size: 18px; line-height: 1.8; margin: 0; color: #e0e0e0;">
+MDiHub offers state-of-the-art facilities designed to foster innovation and collaboration in the North West Province. Our spaces include modern co-working areas, fully equipped training rooms, high-speed internet access, and prototyping labs with the latest hardware and software tools. Members and visitors can leverage these facilities for workshops, hackathons, incubation programs, and hands-on projects, creating an environment where ideas turn into real-world solutions.
+</p>
+</div>
+</section>
+
+<section class="spaces-section">
+  <div class="section-header">
+    <h2 class="section-title"><b>Specialized Zones</b></h2>
+   
+  </div>
+
+  <div class="cards-container">
+    <!-- Makerspace -->
+    <div class="card">
+      <div class="container-card bg-yellow-box">
+        <div class="slideshow-container" id="makerspace-slideshow">
+          <div class="slide"><img src="https://picsum.photos/400/250?random=1" alt="Makerspace 1"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=2" alt="Makerspace 2"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=3" alt="Makerspace 3"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=4" alt="Makerspace 4"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=5" alt="Makerspace 5"></div>
+        </div>
+        <p class="card-title">Makerspace</p>
+        <p class="card-description">
+          A collaborative workspace for making, learning, exploring and sharing that uses high tech to no tech tools. Perfect for hardware development, prototyping and manufacturing.
+        </p>
+        <!-- From Uiverse.io by Javierrocadev -->
+        <button class="border text-gray-50 duration-300 relative group cursor-pointer overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 font-extrabold hover:bg-sky-700">
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150 duration-700 right-12 top-12 bg-yellow-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150 duration-700 right-20 -top-6 bg-orange-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8 rounded-full group-hover:scale-150 duration-700 right-32 top-6 bg-pink-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4 rounded-full group-hover:scale-150 duration-700 right-2 top-12 bg-red-600"></div>
+          <p class="z-10 absolute bottom-2 left-2">See more</p>
+        </button>
+      </div>
+    </div>
+  
+    <!-- VR Space -->
+    <div class="card">
+      <div class="container-card bg-yellow-box">
+        <div class="slideshow-container" id="vrspace-slideshow">
+          <div class="slide"><img src="https://picsum.photos/400/250?random=6" alt="VR Space 1"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=7" alt="VR Space 2"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=8" alt="VR Space 3"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=9" alt="VR Space 4"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=10" alt="VR Space 5"></div>
+        </div>
+        <p class="card-title">VR Space</p>
+        <p class="card-description">
+          Explore immersive virtual reality experiences, training simulations, and prototyping in a state-of-the-art VR lab.
+        </p>
+        <!-- From Uiverse.io by Javierrocadev -->
+        <button class="border text-gray-50 duration-300 relative group cursor-pointer overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 font-extrabold hover:bg-sky-700">
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150 duration-700 right-12 top-12 bg-yellow-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150 duration-700 right-20 -top-6 bg-orange-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8 rounded-full group-hover:scale-150 duration-700 right-32 top-6 bg-pink-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4 rounded-full group-hover:scale-150 duration-700 right-2 top-12 bg-red-600"></div>
+          <p class="z-10 absolute bottom-2 left-2">See more</p>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Auditorium -->
+    <div class="card">
+      <div class="container-card bg-yellow-box">
+        <div class="slideshow-container" id="auditorium-slideshow">
+          <div class="slide"><img src="https://picsum.photos/400/250?random=11" alt="Auditorium 1"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=12" alt="Auditorium 2"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=13" alt="Auditorium 3"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=14" alt="Auditorium 4"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=15" alt="Auditorium 5"></div>
+        </div>
+        <p class="card-title">Auditorium</p>
+        <p class="card-description">
+          Large-scale presentation and event space designed for conferences, workshops, and public events.
+        </p>
+<!-- From Uiverse.io by Javierrocadev --> 
+<!-- From Uiverse.io by Javierrocadev --> 
+<button class="border text-gray-50  duration-300 relative group cursor-pointer   overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2  font-extrabold hover:bg-sky-700">
+
+  <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150  duration-700 right-12 top-12 bg-yellow-500"></div>
+  <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150  duration-700 right-20 -top-6 bg-orange-500"></div>
+  <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8   rounded-full group-hover:scale-150  duration-700 right-32 top-6 bg-pink-500"></div>
+  <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4   rounded-full group-hover:scale-150  duration-700 right-2 top-12 bg-red-600"></div>
+  <p class="z-10 absolute bottom-2 left-2">See more</p>
+</button>
+
+      </div>
+    </div>
+  
+    <!-- Meeting Room -->
+    <div class="card">
+      <div class="container-card bg-yellow-box">
+        <div class="slideshow-container" id="meetingroom-slideshow">
+          <div class="slide"><img src="https://picsum.photos/400/250?random=16" alt="Meeting Room 1"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=17" alt="Meeting Room 2"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=18" alt="Meeting Room 3"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=19" alt="Meeting Room 4"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=20" alt="Meeting Room 5"></div>
+        </div>
+        <p class="card-title">Meeting Room</p>
+        <p class="card-description">
+          Professional meeting spaces equipped with presentation technology, perfect for client meetings, team brainstorming, and collaborative sessions.
+        </p>
+        <!-- From Uiverse.io by Javierrocadev -->
+        <button class="border text-gray-50 duration-300 relative group cursor-pointer overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 font-extrabold hover:bg-sky-700">
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150 duration-700 right-12 top-12 bg-yellow-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150 duration-700 right-20 -top-6 bg-orange-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8 rounded-full group-hover:scale-150 duration-700 right-32 top-6 bg-pink-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4 rounded-full group-hover:scale-150 duration-700 right-2 top-12 bg-red-600"></div>
+          <p class="z-10 absolute bottom-2 left-2">See more</p>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Boardroom -->
+    <div class="card">
+      <div class="container-card bg-yellow-box">
+        <div class="slideshow-container" id="boardroom-slideshow">
+          <div class="slide"><img src="https://picsum.photos/400/250?random=21" alt="Boardroom 1"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=22" alt="Boardroom 2"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=23" alt="Boardroom 3"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=24" alt="Boardroom 4"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=25" alt="Boardroom 5"></div>
+        </div>
+        <p class="card-title">Boardroom</p>
+        <p class="card-description">
+          High-end boardroom for executive meetings, strategic planning, and decision-making sessions.
+        </p>
+        <!-- From Uiverse.io by Javierrocadev -->
+        <button class="border text-gray-50 duration-300 relative group cursor-pointer overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 font-extrabold hover:bg-sky-700">
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150 duration-700 right-12 top-12 bg-yellow-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150 duration-700 right-20 -top-6 bg-orange-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8 rounded-full group-hover:scale-150 duration-700 right-32 top-6 bg-pink-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4 rounded-full group-hover:scale-150 duration-700 right-2 top-12 bg-red-600"></div>
+          <p class="z-10 absolute bottom-2 left-2">See more</p>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Co-Working Space -->
+    <div class="card">
+      <div class="container-card bg-yellow-box">
+        <div class="slideshow-container" id="coworking-slideshow">
+          <div class="slide"><img src="https://picsum.photos/400/250?random=26" alt="Co-Working 1"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=27" alt="Co-Working 2"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=28" alt="Co-Working 3"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=29" alt="Co-Working 4"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=30" alt="Co-Working 5"></div>
+        </div>
+        <p class="card-title">Co-Working Space</p>
+        <p class="card-description">
+          Open, flexible workspace with hot desks, community areas, and networking opportunities for freelancers and remote workers.
+        </p>
+        <!-- From Uiverse.io by Javierrocadev -->
+        <button class="border text-gray-50 duration-300 relative group cursor-pointer overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 font-extrabold hover:bg-sky-700">
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150 duration-700 right-12 top-12 bg-yellow-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150 duration-700 right-20 -top-6 bg-orange-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8 rounded-full group-hover:scale-150 duration-700 right-32 top-6 bg-pink-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4 rounded-full group-hover:scale-150 duration-700 right-2 top-12 bg-red-600"></div>
+          <p class="z-10 absolute bottom-2 left-2">See more</p>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Landing Office Space -->
+    <div class="card">
+      <div class="container-card bg-yellow-box">
+        <div class="slideshow-container" id="landingoffice-slideshow">
+          <div class="slide"><img src="https://picsum.photos/400/250?random=31" alt="Landing Office 1"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=32" alt="Landing Office 2"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=33" alt="Landing Office 3"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=34" alt="Landing Office 4"></div>
+          <div class="slide"><img src="https://picsum.photos/400/250?random=35" alt="Landing Office 5"></div>
+        </div>
+        <p class="card-title">Landing Office Space</p>
+        <p class="card-description">
+          Fully-equipped private offices for startups and entrepreneurs needing professional workspace with all amenities included.
+        </p>
+        <!-- From Uiverse.io by Javierrocadev -->
+        <button class="border text-gray-50 duration-300 relative group cursor-pointer overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 font-extrabold hover:bg-sky-700">
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150 duration-700 right-12 top-12 bg-yellow-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150 duration-700 right-20 -top-6 bg-orange-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8 rounded-full group-hover:scale-150 duration-700 right-32 top-6 bg-pink-500"></div>
+          <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4 rounded-full group-hover:scale-150 duration-700 right-2 top-12 bg-red-600"></div>
+          <p class="z-10 absolute bottom-2 left-2">See more</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Popup Modal Structure (would appear when clicking any space) -->
+<div id="spaceModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2 id="modalTitle">Space Title</h2>
+    <div class="modal-gallery">
+      <!-- Gallery images would be inserted here by JavaScript -->
+    </div>
+    <div class="modal-pricing">
+      <h3>Pricing</h3>
+      <div id="pricingDetails">
+        <!-- Pricing information would be inserted here by JavaScript -->
+      </div>
+    </div>
+    <button class="book-now-btn">Book This Space</button>
+  </div>
+</div>
+
+<style>
+  /* Base Styles */
+:root {
+  --primary: #FFC107; /* Yellow */
+  --primary-dark: #FFA000;
+  --secondary: #000000; /* Blue */
+  --dark: #212121;
+  --light: #f5f5f5;
+  --gray: #757575;
+  --white: #ffffff;
+  --black: #000000;
+  --success: #4CAF50;
+}
+/* Modified from Uiverse.io by DanielIdow65799 */
+.svg-frame {
+  position: absolute;
+  right: 220px; /* Move to far right */
+  bottom: -1500px;
+  width: 500px; /* Increased size */
+  height: 100px; /* Increased size */
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-frame svg {
+  position: absolute;
+  transition: 0.1s;
+  z-index: calc(1 - (0.2 * var(--j)));
+  transform-origin: center;
+  width: 344px;
+  height: 344px;
+  fill: none;
+}
+
+.svg-frame:hover svg {
+  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i)))
+    translateY(calc(-35px * var(--i)));
+}
+
+.svg-frame svg #center {
+  transition: 0.1s;
+  transform-origin: center;
+}
+
+.svg-frame:hover svg #center {
+  transform: rotate(-30deg) translateX(45px) translateY(-3px);
+}
+
+#out2 {
+  animation: rotate16 2s ease-in-out infinite alternate;
+  transform-origin: center;
+  stroke: #000; /* Black color */
+}
+
+#out3 {
+  animation: rotate16 2s ease-in-out infinite alternate;
+  transform-origin: center;
+  stroke: #FFD700; /* Gold color */
+}
+
+#inner3,
+#inner1 {
+  animation: rotate16 1s ease-in-out infinite alternate;
+  transform-origin: center;
+  stroke: #FFD700; /* Gold color */
+}
+
+#center1 {
+  fill: #FFD700; /* Gold color */
+  animation: rotate16 1s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes rotate16 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Main Content Sections */
+section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.section-description {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--gray);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Cards Grid */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  perspective: 1000px;
+  height: 100%;
+}
+
+.container-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.container-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bg-yellow-box {
+  border-top: 5px solid var(--primary);
+}
+
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Card Content */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 1.5rem 0.5rem;
+  color: var(--dark);
+}
+
+.card-description {
+  margin: 0 1.5rem 1.5rem;
+  color: var(--gray);
+  flex-grow: 1;
+}
+
+/* See More Button */
+.container-card button {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 90%;
+  position: relative;
+  animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: var(--gray);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: var(--black);
+}
+
+#modalTitle {
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.modal-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.modal-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.modal-pricing {
+  background: rgba(33, 150, 243, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.modal-pricing h3 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.book-now-btn {
+  background-color: var(--primary);
+  color: var(--dark);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+.book-now-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    margin: 2% auto;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 2rem 1rem;
+  }
+  
+  .modal-content {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .modal-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize all slideshows
+  const slideshows = document.querySelectorAll('.slideshow-container');
+  
+  slideshows.forEach(slideshow => {
+    const slides = slideshow.querySelectorAll('.slide');
+    let currentSlide = 0;
+    
+    // Show first slide
+    slides[currentSlide].classList.add('active');
+    
+    // Change slide every 3 seconds
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 3000);
+  });
+  
+  // Modal functionality
+  const cards = document.querySelectorAll('.card');
+  const modal = document.getElementById('spaceModal');
+  const closeModal = document.querySelector('.close-modal');
+  
+  cards.forEach(card => {
+    card.addEventListener('click', function() {
+      const title = this.querySelector('.card-title').textContent;
+      const description = this.querySelector('.card-description').textContent;
+      const images = Array.from(this.querySelectorAll('.slide img')).map(img => img.src);
+      
+      document.getElementById('modalTitle').textContent = title;
+      
+      const gallery = document.querySelector('.modal-gallery');
+      gallery.innerHTML = '';
+      images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = title;
+        gallery.appendChild(img);
+      });
+      
+      // In a real implementation, you would fetch pricing data from a database
+      const pricingDetails = document.getElementById('pricingDetails');
+      pricingDetails.innerHTML = `
+        <p><strong>Hourly Rate:</strong> R150 - R300</p>
+        <p><strong>Daily Rate:</strong> R800 - R1500</p>
+        <p><strong>Monthly Rate:</strong> R5000 - R10000</p>
+        <p>Discounts available for members and startups.</p>
+      `;
+      
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  
+  closeModal.addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+  
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+});
+</script>
+<style>
+        .satellite-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 40px auto;
+        }
+        
+        .satellite-section {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .satellite-heading {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #000;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .satellite-heading:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #D4AF37, #FFD700, #D4AF37);
+            border-radius: 2px;
+        }
+        
+        .satellite-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .satellite-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.4s ease;
+            flex: 1;
+            min-width: 300px;
+            max-width: 380px;
+        }
+        
+        .satellite-card-link:hover {
+            transform: translateY(-8px);
+        }
+        
+        .satellite-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e0e0;
+            position: relative;
+        }
+        
+        .satellite-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #D4AF37, #FFD700, #D4AF37);
+        }
+        
+        .satellite-card-link:hover .satellite-card {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .satellite-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #D4AF37;
+        }
+        
+        .satellite-card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .satellite-card h3 {
+            font-size: 1.5rem;
+            color: #000;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .satellite-card p {
+            color: #444;
+            margin-bottom: 25px;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+        
+        .satellite-status {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: auto;
+            align-self: flex-start;
+        }
+        
+        .status-available {
+            background-color: rgba(212, 175, 55, 0.15);
+            color: #000;
+            border: 1px solid #D4AF37;
+        }
+        
+        .status-coming-soon {
+            background-color: rgba(0, 0, 0, 0.07);
+            color: #000;
+            border: 1px solid #888;
+        }
+        
+        @media (max-width: 992px) {
+            .satellite-grid {
+                gap: 25px;
+            }
+            
+            .satellite-card-link {
+                min-width: 280px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .satellite-heading {
+                font-size: 1.9rem;
+            }
+            
+            .satellite-section {
+                padding: 30px 20px;
+            }
+            
+            .satellite-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .satellite-card-link {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .satellite-heading {
+                font-size: 1.7rem;
+            }
+            
+            .satellite-card img {
+                height: 180px;
+            }
+            
+            .satellite-card-content {
+                padding: 20px;
+            }
+            
+            .satellite-card h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        
+   #footer {
+  position: relative;
+  overflow: hidden;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(270deg, #d4af37, #ffea00, #d4af37);
+  background-size: 600% 600%;
+  animation: glowingBorder 8s linear infinite;
+  filter: blur(6px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes glowingBorder {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+#footer {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  background: #0d0d0d; /* darker black background */
+  background-image:
+    linear-gradient(rgba(212,175,55,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveGrid 60s linear infinite; /* slower grid animation */
+  color: #b8b8b8;
+  border-top: 1px solid rgba(212,175,55,0.1);
+  z-index: 10;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(270deg, rgb(212, 175, 55), rgba(255,234,0,0.1), rgba(212,175,55,0.3));
+  background-size: 600% 600%;
+  animation: glowingBorder 12s linear infinite;
+  filter: blur(4px);
+  opacity: 0.25;  /* much more subtle */
+  z-index: 0;
+}
+
+@keyframes glowingBorder {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes moveGrid {
+  0% {background-position: 0 0, 0 0;}
+  100% {background-position: 40px 40px, 40px 40px;}
+}
+
+.social-icons a:hover {
+  animation: pulseGlow 1.8s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(255, 234, 0, 0.3);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.4), 0 0 10px rgba(255, 234, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 0 30px rgba(255, 234, 0, 0.4);
+  }
+}
+
+.footer-content {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-logo img {
+  height: 60px; /* increased from 40px */
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  animation: pulse 3s ease-in-out infinite;
+  transition: filter 0.3s ease;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(0) invert(1);
+  }
+  50% {
+    transform: scale(1.08);
+    filter: brightness(0) invert(0.85);
+  }
+}
+
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #b8b8b8;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-links a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #d4af37;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.footer-links a:hover {
+  color: #d4af37;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #222222;
+  color: #d4af37;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+.social-icons a:hover {
+  background: #d4af37;
+  color: #121212;
+  box-shadow: 0 0 15px #d4af37;
+}
+
+.social-icons a svg {
+  width: 18px;
+  height: 18px;
+}
+
+copyright {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 25px;
+  color: #666666;
+  font-size: 13px;
+  user-select: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="satellite-container">
+        <section class="satellite-section">
+            <h2 class="satellite-heading">Satellite Offices (Centres)</h2>
+            
+            <div class="satellite-grid">
+                <a href="NMM.html" class="satellite-card-link">
+                    <div class="satellite-card">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Cisco EDGE Center">
+                        <div class="satellite-card-content">
+                            <h3>MafiHub Cisco EDGE Center</h3>
+                            <p>A premier technology center equipped with cutting-edge networking infrastructure and collaboration tools. Focused on innovation and digital transformation.</p>
+                            <span class="satellite-status status-available">Available Now</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="RSM.html" class="satellite-card-link">
+                    <div class="satellite-card">
+                        <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Living Lab">
+                        <div class="satellite-card-content">
+                            <h3>Living Lab</h3>
+                            <p>An innovative agricultural research center exploring sustainable farming techniques and smart agriculture solutions for the future.</p>
+                            <span class="satellite-status status-available">Available Now</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="Bojanala.html" class="satellite-card-link">
+                    <div class="satellite-card">
+                        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Bojanala">
+                        <div class="satellite-card-content">
+                            <h3>Bojanala</h3>
+                            <p>A future learning factory dedicated to vocational training, skills development, and technological innovation in manufacturing.</p>
+                            <span class="satellite-status status-coming-soon">Coming Soon</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+
+    <footer id="footer">
+      <div class="footer-content">
+    
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Brand Logo">
+        </div>
+    
+        <div class="footer-links">
+          <a href="#terms">Terms & Conditions</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#cookies">Cookies</a>
+        </div>
+    
+        <div id="address-map" style="flex: 1 1 320px; min-width: 280px; color: #b8b8b8; font-size: 14px;">
+          <h4 style="color: #d4af37; margin-bottom: 8px; font-weight: 600;">Our Location</h4>
+          <p style="margin: 0 0 12px 0;">2696 James Watt Cres, Mafikeng, Industrial Site</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.221753306938!2d25.85202851502347!3d-25.852098382365665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb77249e672a6af%3A0x4d66819ac5a23e70!2s2697%20James%20Watt%20Cres%2C%20Mafikeng%2C%20Industrial%20Site!5e0!3m2!1sen!2sza!4v1691847970283!5m2!1sen!2sza"
+            width="100%" height="120" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+    
+    
+        </div>
+    
+        <div id="social-links" class="social-icons">
+          <!-- Social icons here -->
+        </div>
+    
+        <p class="copyright">
+          &copy; <span id="current-year"></span> Mafikeng Digital Innovation Hub. All Rights Reserved.
+        </p>
+    
+      </div>
+    </footer>
+
+
+<script>
+  document.getElementById("mobile-menu").onclick = function() {
+    document.getElementById("menu").classList.toggle("show");
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS('particles-js', {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": { "enable": true, "value_area": 800 }
+      },
+      "color": { "value": "#996515" },
+      "shape": {
+        "type": "circle",
+        "stroke": { "width": 0, "color": "#000000" },
+        "polygon": { "nb_sides": 5 }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": true,
+        "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": { "enable": true, "speed": 40, "size_min": 0.1, "sync": false }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#996515",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" },
+        "onclick": { "enable": true, "mode": "push" },
+        "resize": true
+      },
+      "modes": {
+        "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
+        "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
+        "repulse": { "distance": 100, "duration": 0.4 },
+        "push": { "particles_nb": 4 },
+        "remove": { "particles_nb": 2 }
+      }
+    },
+    "retina_detect": true
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+  
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+
+   
+    const socialLinksData = [
+        { href: "https://facebook.com", iconClass: "fab fa-facebook-f" },
+        { href: "https://twitter.com", iconClass: "fab fa-twitter" },
+        { href: "https://instagram.com", iconClass: "fab fa-instagram" },
+        { href: "https://linkedin.com", iconClass: "fab fa-linkedin-in" },
+    ];
+
+    const socialLinksContainer = document.getElementById("social-links");
+    socialLinksData.forEach(link => {
+        const anchor = document.createElement("a");
+        anchor.href = link.href;
+        anchor.target = "_blank";
+        anchor.innerHTML = `<i class="${link.iconClass}"></i>`;
+        socialLinksContainer.appendChild(anchor);
+    });
+});
+</script>
+
+</body>
+</html>

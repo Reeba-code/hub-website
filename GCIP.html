@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Programs - Mafikeng Digital Innovataion Hub</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+	<style>
+		  body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #ffffff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+  
+    
+/* Futuristic Tech Cursor */
+.tech-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, width 0.2s ease, height 0.2s ease;
+  mix-blend-mode: difference;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+.cursor-outer {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #00f7ff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00f7ff, 0 0 30px rgba(0, 247, 255, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.cursor-inner {
+  width: 8px;
+  height: 8px;
+  background: #00f7ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+}
+
+.cursor-trail {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #00f7ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover Effects (for buttons/links) */
+a:hover ~ .tech-cursor .cursor-outer,
+button:hover ~ .tech-cursor .cursor-outer {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 1;
+  border-color: #ff00aa;
+  box-shadow: 0 0 20px #ff00aa;
+}
+
+a:hover ~ .tech-cursor .cursor-inner,
+button:hover ~ .tech-cursor .cursor-inner {
+  background: #ff00aa;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Mobile Fallback */
+@media (max-width: 768px) {
+  body { cursor: auto; }
+  .tech-cursor { display: none; }
+}
+/* Header Styles */
+    #header {
+      background: #ffffff00;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1030;
+    }
+    
+    .navbar-brand img {
+      width: 100px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .navbar-brand img:hover {
+      transform: scale(1.1);
+    }
+    
+    .navbar-nav .nav-link {
+      color: #000;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 10px 20px;
+      position: relative;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: #ffd700;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .dropdown-menu {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      border: none;
+    }
+    
+    .header-social-links a {
+      color: black;
+      margin-left: 15px;
+      font-size: 1.2rem;
+      transition: transform 0.2s, color 0.2s;
+    }
+    
+    .header-social-links a:hover {
+      color: #ffd700;
+      transform: scale(1.1);
+    }
+    
+    .navbar-toggler {
+      border: none;
+      font-size: 1.5rem;
+      padding: 0.25rem 0.5rem;
+    }
+    
+    /* Mobile menu adjustments */
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .header-social-links {
+        justify-content: center;
+        padding: 15px 0 0;
+      }
+    }
+
+
+    .gcip-banner {
+      display: flex;
+      background: linear-gradient(135deg, #D4AF37 60%, transparent 40%);
+      color: white;
+      padding: 1rem 1.5rem 0.5rem;
+      position: relative;
+      z-index: 10;
+      flex-wrap: wrap;
+      overflow: hidden; 
+      height: 220px;
+      margin-top: 130px; 
+    }
+
+    .gcip-banner-text {
+      flex: 1 1 60%;
+      padding-right: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .gcip-banner-media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: calc(40% + 90px); 
+  overflow: hidden;
+  z-index: 1;
+  margin-right: 0; 
+}
+
+
+    .gcip-banner-media video {
+      width: 100%;
+      height: 150%;
+      object-fit: cover;
+      object-position: center;
+      margin-top: 0;
+    }
+
+    
+    .white-badge {
+      background: white;
+      color: #D4AF37;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 3;
+    }
+
+    .left-badge {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+    }
+
+    .right-badge {
+      position: absolute;
+      right: 20px;
+      bottom: -10px;
+    }
+
+    .blue-arch-banner {
+      background: #ffffff;
+      margin-top: 0;
+      padding-top: 60px;
+      z-index: 10;
+      position: relative;
+      color: #000;
+    }
+
+    .gcip-banner img {
+      border-radius: 12px;
+    }
+
+    .gcip-banner-text {
+      background: linear-gradient(135deg, #000000 60%, transparent 40%);
+      flex: 1;
+      padding: 1rem 1rem;
+    }
+    
+    .gcip-banner-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mihub-logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 20px;
+      z-index: 10;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: #0a3d62;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #00a86b, #0056b3);
+      border-radius: 2px;
+    }
+    .gcip-box {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gcip-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    .qr-code {
+      max-width: 180px;
+      display: block;
+      margin: 0 auto;
+    }
+    .contact-info p {
+      margin: 0.3rem 0;
+    }
+    .partner-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 0;
+    }
+    .partner-logos img {
+      max-height: 80px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .partner-logos img:hover {
+      transform: scale(1.05);
+    }
+    
+   
+    .apply-section {
+      background: linear-gradient(135deg, #0000 0%, #D4AF37 100%);
+      color: rgb(0, 0, 0);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .apply-section:before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      transform: rotate(30deg);
+      z-index: 1;
+    }
+    .apply-btn {
+      background: white;
+      color: #0056b3;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      font-weight: bold;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 2;
+    }
+    .apply-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+ 
+    .success-stories {
+      margin: 3rem 0;
+    }
+    .story-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .story-card:hover {
+      transform: translateY(-5px);
+    }
+    .story-img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .story-card:hover .story-img {
+      transform: scale(1.03);
+    }
+    .story-content {
+      padding: 1.5rem;
+    }
+    .story-title {
+      color: #0a3d62;
+      margin-bottom: 1rem;
+    }
+    .story-meta {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .story-highlight {
+      background: #f0f8ff;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      border-left: 4px solid #0056b3;
+    }
+  
+    .call-for-applications {
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      background-attachment: fixed;
+      padding: 5rem 0;
+      color: rgb(0, 0, 0);
+    }
+    .call-for-applications:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      z-index: 0;
+    }
+    .call-for-applications .container {
+      position: relative;
+      z-index: 1;
+    }
+  
+.eligible-solutions {
+ padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+.eligible-solutions .gcip-box {
+  display: flex;
+  flex-direction: row;
+  min-height: 400px;
+  background: linear-gradient(135deg, #ffffff 0%, white 100%);
+  border-left: 5px solid #D4AF37;
+  overflow: hidden; 
+}
+
+.eligible-solutions .gcip-box > .content-text {
+  flex: 1 1 50%;
+  padding: 2rem;
+}
+
+.eligible-solutions .gcip-box > .media-content {
+  flex: 1 1 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.pre-acceleration {
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+.pre-acceleration .gcip-box {
+  display: flex;
+  flex-direction: row;
+  min-height: 400px;
+  background: linear-gradient(135deg, white 0%, #ffffff 100%);
+  border-left: 5px solid #0056b3;
+  overflow: hidden; 
+}
+
+.pre-acceleration .gcip-box > .content-text {
+  flex: 1 1 50%;
+  padding: 2rem;
+}
+
+.pre-acceleration .gcip-box > .media-content {
+  flex: 1 1 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+
+  .eligible-solutions .gcip-box,
+  .pre-acceleration .gcip-box {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .eligible-solutions .gcip-box > .content-text,
+  .pre-acceleration .gcip-box > .content-text {
+    flex: 1 1 100%;
+    padding: 1.5rem;
+    order: 1;
+  }
+  
+  .eligible-solutions .gcip-box > .media-content,
+  .pre-acceleration .gcip-box > .media-content {
+    flex: 1 1 100%;
+    height: 250px;
+    order: 2;
+  }
+  
+
+  .container > .row > [class^="col-"] {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
+    .section {
+      padding: 4rem 0;
+      position: relative;
+    }
+    .section-parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+    }
+    .slide-up {
+      transform: translateY(50px);
+      opacity: 0;
+      transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+    }
+    .slide-up.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+    @media (max-width: 768px) {
+      .gcip-banner {
+        height: auto;
+        background: #D4AF37;
+        margin-top: 60px; 
+      }
+      .gcip-banner-media {
+        position: relative;
+        width: 100%;
+        height: 200px;
+      }
+      .call-for-applications {
+        background-attachment: scroll;
+      }
+      
+   
+      .eligible-solutions .gcip-box,
+      .pre-acceleration .gcip-box {
+        flex-direction: column !important;
+        min-height: auto !important;
+      }
+      
+      .eligible-solutions .gcip-box > div,
+      .pre-acceleration .gcip-box > div {
+        flex: 1 1 100% !important;
+      }
+      
+      .eligible-solutions .gcip-box > div:first-child,
+      .pre-acceleration .gcip-box > div:first-child {
+        order: 1;
+        padding: 1.5rem !important;
+      }
+      
+      .eligible-solutions .gcip-box > div:last-child,
+      .pre-acceleration .gcip-box > div:last-child {
+        order: 2;
+        height: 250px !important;
+      }
+      
+     
+      .apply-section .row {
+        flex-direction: column;
+      }
+      
+      .apply-section .col-md-8 {
+        order: 1;
+        margin-bottom: 1.5rem;
+      }
+      
+      .apply-section .col-md-4 {
+        order: 2;
+      }
+    }
+	</style>
+</head>
+ 
+<body>
+
+    
+  <!-- Header/Navbar -->
+  <header id="header" class="fixed-top">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/MiHub.png" alt="Mafikeng Digital Innovation Hub Logo">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="team.html">Team</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="recruitmentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Recruitment
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="recruitmentDropdown">
+                <li><a class="dropdown-item" href="Incubation-application.html">Incumbent Applications</a></li>
+                <li><a class="dropdown-item" href="vacancies.html">Vacancies</a></li>
+                <li><a class="dropdown-item" href="programs.html">Programs</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="companies.html">Companies</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="services.html">Services</a></li>
+                <li><a class="dropdown-item" href="prices.html">Prices</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="centers.html">Centers</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          
+          <div class="header-social-links d-flex">
+            <a href="https://twitter.com/MafIHub" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/Mafihub" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/mafikeng.innovation.hub" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/mafikeng-digital-innovation-hub/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main id="main">
+
+
+  <div class="gcip-banner position-relative d-flex flex-wrap">
+    <div class="gcip-banner-text">
+      <div class="d-flex align-items-center mb-3">
+       
+        <div>
+          <h1 class="mb-1" style="font-size: 2rem; font-weight: bold;">Mafikeng Innovation Hub Cleantech Programme</h1>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location Pin" style="width: 15px; height: 15px; margin-right: 10px;">
+        <p class="mb-0" style="font-size: 0.9rem;"><strong>2696 James Watt Crescent, Mahikeng Industrial, 2745</strong></p>
+      </div>
+    </div>
+    
+    <div class="gcip-banner-media">
+      <video autoplay muted loop playsinline>
+        <source src="images/turbines.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <div class="white-badge left-badge">
+      Mafikeng Innovation Hub CleanTech Programme
+    </div>
+    
+    <div class="white-badge right-badge">
+     
+    </div>
+  </div>
+
+  
+
+
+<section class="call-for-applications text-center py-5 section-parallax">
+  <div class="container" data-aos="zoom-in">
+    
+    <h1 class="display-4 font-weight-bold mb-4">CALL FOR ENTRIES</h1>
+    
+  
+    <h2 class="h4 font-weight-light mb-5 text-uppercase" style="letter-spacing: 1px;">
+      ADVANCING CLEANTECH INNOVATION AND ENTREPRENEURSHIP FOR CLIMATE ACTION AND SUSTAINABLE DEVELOPMENT IN SOUTH AFRICA.
+    </h2>
+    
+    
+
+    <div class="bg-light p-4 p-md-5 rounded-lg mx-auto" style="max-width: 800px; background-color: rgba(255,255,255,0.9) !important;">
+      <p class="lead mb-4" style="color: #000; font-weight: bold;">
+        MiHub is proud to be a partner in the GCIP 2.0 Hubs and Spokes Initiative
+      </p>
+      
+      <p class="text-muted mb-4">
+        Under the GCIP 2.0 Hubs and Spokes initiative, the Accelerator is being delivered in collaboration with nine cleantech implementing partners across South Africa. These partners include leading innovation hubs, universities, and business incubators that provide tailored acceleration support, expert mentorship, and access to valuable networks and funding opportunities.
+      </p>
+      
+      <p class="text-muted">
+        MiHub as an implementing partner, will continue to contribute to the advancement of clean technology innovation and entrepreneurship in South Africa.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <div class="container my-4">
+
+  <!-- Arch Blue Banner -->
+  <div class="blue-arch-banner text-black text-center py-4" data-aos="fade-down">
+    <h1 class="mb-2">NATIONAL CLEANTECH INNOVATION CHALLENGE</h1>
+    <p class="lead">For Cleantech entrepreneurs & innovators</p>
+    <p><b><i> <h6><i> NORTH-WEST PROVINCE NODE</i></h6></i></b></p>
+  </div>
+
+
+<section class="eligible-solutions" data-aos="fade-up"  style= "margin-bottom: 2rem; padding: 0;">
+  <div class="row g-0">
+    <div class="col-md-12">
+      <div class="gcip-box">
+        <!-- Text -->
+        <div class="content-text">
+          <h2 class="section-title">Eligible Solutions</h2>
+          <p>Solutions should fall within the following sub-disciplines but are not limited to:</p>
+          <ul>
+            <li>Renewable energy</li>
+            <li>Energy efficiency</li>
+            <li>Water efficiency</li>
+            <li>Waste beneficiation</li>
+            <li>Green buildings</li>
+            <li>E-mobility/transportation</li>
+            <li>Advanced Eco materials & chemicals</li>
+            <li>Climate-smart Agritech, among others</li>
+          </ul>
+        </div>
+  
+         <div class="media-content">
+          <video src="images/electricity.mp4" class="img-fluid" autoplay loop muted playsinline></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="pre-acceleration" data-aos="fade-up" data-aos-delay="100" style="margin-bottom: 2rem; padding: 0;">
+  <div class="row g-0">
+    <div class="col-md-12">
+      <div class="gcip-box">
+        <!-- Image -->
+        <div class="media-content">
+          <img src="images/emobility.jpg" class="img-fluid">
+        </div>
+     
+        <div class="content-text">
+          <h2 class="section-title">Pre-Acceleration Objectives</h2>
+          <ul>
+            <li>Increased participation of under-represented groups.</li>
+            <li>Support the development of new cleantech solutions.</li>
+            <li>Assist entrepreneurs in addressing key transitory gaps.</li>
+            <li>Provide support to a larger more diverse group of entrepreneurs.</li>
+          </ul>
+       </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+   
+    <div class="apply-section" data-aos="zoom-in" >
+      <h2>Join MIHub to Transform Your Cleantech Idea into Reality?</h2>
+      <p>Join our pre-acceleration program and get the support you need to develop your sustainable solution.</p>
+      <p><strong>Applications close: January 15, 2026</strong></p>
+      
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-8">
+          <p>• Open to all people in the North West province with preference given to women, youth, persons with disabilities and black entrepreneurs</p>
+          <p>• Applications must be submitted online</p>
+         <a href="https://docs.google.com/forms/d/e/1FAIpQLScyMHUFXgmYzAbzymdpGQDJS88DVIcuCfnYOrcZJlRMzQkDoA/viewform
+         " target="https://docs.google.com/forms/d/e/1FAIpQLScyMHUFXgmYzAbzymdpGQDJS88DVIcuCfnYOrcZJlRMzQkDoA/viewform" class="apply-btn" style="text-decoration: none;">CLICK HERE TO APPLY</a>
+        </div>
+        <div class="col-md-4">
+          <h4>Scan to Apply</h4>
+          <img src="images/qr cODE.jpg" alt="QR Code" class="img-fluid qr-code">
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Stories Section 
+    <div class="success-stories" data-aos="fade-up">
+      <h2 class="section-title text-center">Success Stories</h2>
+      <p class="text-center mb-4">Discover how our program participants are making an impact with their cleantech innovations</p>
+  
+      <div class="row">
+      
+        <div class="col-md-6">
+          <div class="story-card">
+            <img src="images/Mega G.jpeg" alt="CleanTech Generator" class="story-img">
+            <div class="story-content">
+              <h3 class="story-title">Mega G Technologies</h3>
+              <p class="story-meta">Cleantech Generator Manufacturing</p>
+              <p>Mega G Technologies developed an innovative cleantech generator that converts mechanical energy into electricity with 150% greater efficiency than conventional models while producing zero emissions.</p>
+              <div class="story-highlight">
+                Mpho Moloko has developed a 3D-printed renewable energy generator aimed at helping solve South Africa's energy crisis.
+The generator, which does not use fossil fuels, is designed for homes, businesses, and public facilities like hospitals. Moloko, who studied mechanical and electrical engineering at Taletso TVET College, built the prototype in 2021 with support from the Mafikeng Digital Innovation Hub. He gained his 3D printing skills through ALISON, an online learning platform.
+ Although still a prototype, the generator delivers over 150% efficiency and could power electric vehicles. Moloko hopes to become an Independent Power Producer to offer affordable electricity to underserved communities and reduce load-shedding in the next decade.
+                
+              </div>
+              <p>Their solution addresses both energy poverty and climate change, particularly benefiting rural communities with limited grid access.</p>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div> --->
+
+    <div class="gcip-box contact-info" data-aos="fade-up">
+      <h2>For Enquiries Contact</h2>
+      <p><strong>Phone:</strong> (087) 153 2141 / (078) 590 1615</p>
+      <p><strong>Email:</strong> bmolefhe@mafihub.co.za | nchirwa@mafihub.co.za</p>
+    </div>
+
+    <!-- Partner Logos -->
+    <div class="partner-logos" data-aos="zoom-in">
+      <h2 class="w-100 text-center">Partners</h2>
+      <img src="images/GCIP.png" alt="GCIP">
+      <img src="images/UNIDO.png" alt="UNIDO">
+      <img src="images/SCIENCE.png" alt="DSI">
+      <img src="images/MiHub.png" alt="MiHub">
+      <img src="images/TIA.gif" alt="TIA">
+    </div>
+
+  </div>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Mafikeng Digital Innovation Hub</h3>
+            <p>
+             
+2696 James Watt Cres, Mafikeng Industrial, Mahikeng, 2745 <br><br>
+
+              <strong>Phone:</strong> 081 579 7317<br>
+              <strong>Email:</strong> info@mafihub.co.za<br>
+            </p>
+          </div>
+      
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="serviceterms.html">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacypolicy.html">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://sacoronavirus.co.za/">Covid-19</a></li>
+            </ul>
+          </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">Business growth</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">Skills Training</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">Prototype Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">Business Assistance</a></li>
+            </ul>
+          </div>
+
+        
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            powered by <img src="assets/img/seda.png">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>MDiHub</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
+         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+         <a href="https://twitter.com/MafIHub" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/Mafihub" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://instagram.com/mafikeng.innovation.hub?igshid=g4v9x86d0gl5" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/mafikeng-digital-innovation-hub/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+
+  <script src="assets/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+    
+   
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.section, .eligible-solutions, .pre-acceleration');
+      
+      function checkScroll() {
+        sections.forEach(section => {
+          const sectionTop = section.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (sectionTop < windowHeight * 0.75) {
+            section.classList.add('visible');
+          }
+        });
+      }
+      
+     
+      checkScroll();
+      
+      
+      window.addEventListener('scroll', checkScroll);
+    });
+	</script>
+</body>
+
+</html>

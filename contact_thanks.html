@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You - MIHub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f1630;
+      color: #00aaff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+      padding: 2rem;
+      user-select: none;
+    }
+
+    .thankyou {
+      max-width: 500px;
+      background: #12253e;
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(0, 170, 255, 0.5);
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      letter-spacing: 0.1em;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #a0c5ff;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: 700;
+      color: #00aaff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border: 2px solid #00aaff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+
+    a:hover,
+    a:focus {
+      background-color: #00aaff;
+      color: #0f1630;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou" role="main" aria-label="Thank you message">
+    <h1>Thank You!</h1>
+    <p>Your message has been successfully sent to MIHub.</p>
+    <p>We will get back to you as soon as possible.</p>
+    <a href="contact.html" aria-label="Return to contact page">Send another message</a>
+  </div>
+</body>
+</html>
